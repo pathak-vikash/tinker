@@ -116,6 +116,19 @@ class ConsoleDriver implements DriverInterface
     {
         $this->client->write(self::BOT_NAME.': ...'.PHP_EOL);
     }
+    
+    
+    /**
+     * Send a typing indicator and wait for the given amount of seconds.
+     * @param IncomingMessage $matchingMessage
+     * @param int $seconds
+     * @param float $seconds
+     * @return mixed
+     */
+    public function typesAndWaits(IncomingMessage $matchingMessage, float $seconds){
+        sleep($seconds);
+        $this->client->write(self::BOT_NAME.': ...'.PHP_EOL);
+    }
 
     /**
      * Retrieve User information.
